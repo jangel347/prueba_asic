@@ -44,24 +44,9 @@ function check_id($id,$conn){
     }
 }
 
-function check_id($id,$conn){
-    $sql = "SELECT cedula FROM programador WHERE cedula='$id'";
-    $res = mysqli_query($conn,$sql);
-    if ($res){
-        $count = 0;
-        while ($row = mysqli_fetch_array($res)){
-            $count++;
-        }
-        return ($count == 0)? 'OK' : 'DUPLICATED';
-    } else {
-        write_log('ERROR EN LA CONSULTA '.$sql);
-        return 'ERROR';
-    }
-}
-
 function list_programmers()
 {
-    $sql = "SELECT cedula FROM programador WHERE cedula='$id'";
+    $sql = "SELECT * FROM programador";
     $conn = connect();
     $res = mysqli_query($conn, $sql);
     if (!$res) {
@@ -70,9 +55,13 @@ function list_programmers()
     $res_list = '[';
     $count = 0;
     while ($row = mysqli_fetch_array($res)) {
-        $res_list += '['.$row["cedula"].','.$row["nombre"].','.$row["apellido"].','.$row["correo"].','.$row["lenguajes"].','.$row["fecha_creacion"]. ']';
+        if ($res->num_rows==$count+1){
+            $res_list .= '["'.$row["cedula"].'","'.$row["nombre"].'","'.$row["apellido"].'","'.$row["correo"].'","'.$row["lenguajes"].'","'.$row["fecha_creacion"]. '"]';
+        } else {
+            $res_list .= '["'.$row["cedula"].'","'.$row["nombre"].'","'.$row["apellido"].'","'.$row["correo"].'","'.$row["lenguajes"].'","'.$row["fecha_creacion"]. '"],';
+        }
         $count++;
     }
-    $res_list += ']';
+    $res_list .= ']';
     return ($count) ? $res_list : false;
 }

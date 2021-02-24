@@ -51,16 +51,15 @@ function show_response(response) {
     adv_text.innerHTML = response.description;
     if (response.code == 1) {
         setTimeout(() => {
-            body = programmers.getElementsByClassName('tbody')[0];
             if (response.programmers){
                 for (let i = 0; i < response.programmers.length; i++) {
                     tr = document.createElement('tr');
-                    for (let x = 0; x < response.programmers.length; x++) {
+                    for (let x = 0; x < response.programmers[i].length; x++) {
                         td = document.createElement('td');
                         td.innerText = response.programmers[i][x];
                         tr.appendChild(td);
                     }
-                    body.appendChild(tr);
+                    programmers.appendChild(tr);
                 }
                 modal.style = 'display:flex';
             }

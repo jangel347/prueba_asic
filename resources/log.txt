@@ -10,4 +10,22 @@ INGRESADO: INSERT INTO programador VALUES ('nnn','546','kk','6sd','assda','2021-
 Entrada duplicada INSERT INTO programador VALUES ('n','n','n','n','n','2021-02-24 15:21:22');----------------------------------
 INGRESADO: INSERT INTO programador VALUES ('8989','n','n','n','n','2021-02-24 15:21:38');----------------------------------
 INGRESADO: INSERT INTO programador VALUES ('asd','asdas','asdad','asda','asdasd','2021-02-24 15:21:45');----------------------------------
-INGRESADO: INSERT INTO programador VALUES ('4asd','asdasd','asdas','asda','asdas','2021-02-24 15:23:06');
+INGRESADO: INSERT INTO programador VALUES ('4asd','asdasd','asdas','asda','asdas','2021-02-24 15:23:06');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('45688','n','n','n','n','2021-02-24 17:16:49');----------------------------------
+Entrada duplicada INSERT INTO programador VALUES ('45688','n','n','n','n','2021-02-24 17:17:07');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('9898','asda','asda','asdasd','asdasd','2021-02-24 17:17:17');----------------------------------
+Entrada duplicada INSERT INTO programador VALUES ('9898','asda','asda','asdasd','asdasd','2021-02-24 17:17:40');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('assdasda','asdasd','asdas','aa','aa','2021-02-24 17:17:50');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('sdfsfss','ss','sss','ss','ss','2021-02-24 17:18:18');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('sdssssss','sdd','dd','dd','sass','2021-02-24 17:18:46');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('ssa654','sdss','ss','ss','ss','2021-02-24 17:19:40');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('asaa66','asss99','s','s','aa','2021-02-24 17:20:08');----------------------------------
+Entrada duplicada INSERT INTO programador VALUES ('asaa66','asss99','s','s','aa','2021-02-24 17:21:13');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('sdds','dfdf','dfd','dfdf','dff','2021-02-24 17:21:22');----------------------------------
+Entrada duplicada INSERT INTO programador VALUES ('sdds','dfdf','dfd','dfdf','dff','2021-02-24 17:22:10');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('uuu','asda','asda','asdasd','asd','2021-02-24 17:22:21');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('sss99','sss','ss','ss','ss','2021-02-24 17:22:49');----------------------------------
+Entrada duplicada INSERT INTO programador VALUES ('sss99','sss','ss','ss','ss','2021-02-24 17:23:09');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('awas','asdasd','asdasd','asdasd','aaa','2021-02-24 17:23:18');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('9999aasas','aa','aa','aa','aa','2021-02-24 17:25:31');----------------------------------
+INGRESADO: INSERT INTO programador VALUES ('aaa998979','sssasd','asda','asdasd','asdasd','2021-02-24 17:26:13');
