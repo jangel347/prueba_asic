@@ -18,16 +18,20 @@
                     <input type="text" name="id_p" id="id_p" class="form_input" placeholder="Cédula del programador">
                 </div>
                 <div class="form_section">
-                    <input type="text" name="name_p" id="name_p" class="form_input" placeholder="Nombre del programador">
+                    <input type="text" name="name_p" id="name_p" class="form_input"
+                        placeholder="Nombre del programador">
                 </div>
                 <div class="form_section">
-                    <input type="text" name="last_name_p" id="last_name_p" class="form_input" placeholder="Apellido del programador">
+                    <input type="text" name="last_name_p" id="last_name_p" class="form_input"
+                        placeholder="Apellido del programador">
                 </div>
                 <div class="form_section">
-                    <input type="text" name="email_p" id="email_p" class="form_input" placeholder="Correo del programador">
+                    <input type="text" name="email_p" id="email_p" class="form_input"
+                        placeholder="Correo del programador">
                 </div>
                 <div class="form_section">
-                    <textarea name="languages_p" id="languages_p" class="form_input" placeholder="Lenguajes" cols="30" rows="10"></textarea>
+                    <textarea name="languages_p" id="languages_p" class="form_input" placeholder="Lenguajes" cols="30"
+                        rows="10"></textarea>
                 </div>
                 <div class="form_section">
                     <button id="btn_submit">Ingresar Programador</button>
@@ -35,6 +39,26 @@
                 <div id="adv_text"></div>
             </div>
         </div>
+    </div>
+    <div class="modal_container" id="modal">
+        <div class="block_complete ta_center">
+            <div class="modal">
+                <table id="programmers">
+                    <thead>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Lenguajes</th>
+                        <th>Fecha de creación</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
     <script src="resources/logic.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

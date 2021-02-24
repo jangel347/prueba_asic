@@ -34,8 +34,8 @@ function validate_inputs(list_i) {
     var text_error = 'Debes llenar los siguientes campos:';
     for (let i = 0; i < list_i.length; i++) {
         if (list_i[i].value == '') {
-            console.log('Llena el campo: '+list_i[i].name)
-            text_error += '<br>'+list_i[i].name;
+            console.log('Llena el campo: ' + list_i[i].name)
+            text_error += '<br>' + list_i[i].name;
         } else {
             count++;
         }
@@ -49,7 +49,27 @@ function show_response(response) {
     color = (response.code > 0) ? 'success_color' : 'error_color';
     adv_text.classList.add(color);
     adv_text.innerHTML = response.description;
-    setTimeout(()=>{
-        window.location.reload();
-    },4000);
+    if (response.code == 1) {
+        setTimeout(() => {
+            body = programmers.getElementsByClassName('tbody')[0];
+            if (response.programmers){
+                for (let i = 0; i < response.programmers.length; i++) {
+                    tr = document.createElement('tr');
+                    for (let x = 0; x < response.programmers.length; x++) {
+                        td = document.createElement('td');
+                        td.innerText = response.programmers[i][x];
+                        tr.appendChild(td);
+                    }
+                    body.appendChild(tr);
+                }
+                modal.style = 'display:flex';
+            }
+            
+        }, 4000);
+    } else {
+        setTimeout(() => {
+            window.location.reload();
+        }, 4000);
+    }
+
 }
