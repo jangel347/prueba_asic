@@ -1,10 +1,8 @@
 window.onload = () => {
     document.getElementById('btn_submit').addEventListener('click', send_form);
-    console.log('HOKLA');
 }
 
 function send_form() {
-    console.log('HOKLA');
     list_inputs = form_container.getElementsByTagName('input');
     validated = validate_inputs(list_inputs);
     console.log(validated)
@@ -21,7 +19,8 @@ function send_form() {
                 'languages': languages_p.value
             },
             success: (response) => {
-                show_response(response);
+                var response_json = JSON.parse(response);
+                show_response(response_json);
             }
         });
     } else {
@@ -45,7 +44,12 @@ function validate_inputs(list_i) {
 }
 
 function show_response(response) {
+    adv_text.classList.remove('success_color');
+    adv_text.classList.remove('error_color');
     color = (response.code > 0) ? 'success_color' : 'error_color';
     adv_text.classList.add(color);
     adv_text.innerHTML = response.description;
+    setTimeout(()=>{
+        window.location.reload();
+    },4000);
 }

@@ -8,5 +8,5 @@ CREATE TABLE programador(
     apellido  VARCHAR(100) NOT NULL,
     correo VARCHAR(50),
     lenguajes VARCHAR(500),
-    fecha_creacion datetime CURRENT_TIMESTAMP,
+    fecha_creacion datetime
 )

@@ -8,7 +8,8 @@ function connect(){
 }
 
 function write_log($text){
-    $file = open('log.txt','a');
-    fputs($file,'----------------------------------\n'.$text.'----------------------------------\n');
+    $file = fopen('log.txt','a');
+    fputs($file,"----------------------------------\n");
+    fputs($file,$text);
     fclose($file);
 }
